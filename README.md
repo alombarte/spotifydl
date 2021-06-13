@@ -1,11 +1,15 @@
-Downloads music using [spotDL](https://github.com/spotDL/spotify-downloader) inside a Docker container, so no python is required in the machine.
+A docker container for [spotDL](https://github.com/spotDL/spotify-downloader).
+
+Used to avoid installing python in the host machine.
 
 ## Installation
-This is Docker container. If you have Docker installed, there's nothing else to do. It's easier to use if you add an alias like the following:
+If you have Docker installed alread, add an alias like the following (keep the Docker flags):
 
     alias spotifydl="docker run -it --rm --network="host" -v "$PWD:/music" alombarte/spotifydl spotdl"
 
-### Downloading a playlist
+And that's it. You don't need to clone this repo.
+
+### Usage
 Select any public playlist in Spotify and click on *Share > Copy link to playlist*. Pass the link to the program using quotes, e.g.:
 
     cd ~/Music
